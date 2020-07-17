@@ -14,6 +14,20 @@ public class CurrentWeather {
     private double precipChance;
     private String summary;
 
+    public CurrentWeather() {}
+
+    public CurrentWeather(String locationLabel, String icon, long time, double temperature,
+                          double humidity, double precipChance, String summary, String timeZone) {
+        this.locationLabel = locationLabel;
+        this.icon = icon;
+        this.time = time;
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.precipChance = precipChance;
+        this.summary = summary;
+        this.timeZone = timeZone;
+    }
+
     public String getTimeZone() {
         return timeZone;
     }
@@ -27,9 +41,7 @@ public class CurrentWeather {
         return formatter.format(dateTime);
     }
 
-    public void setTimeZone(String timeZone) {
-        this.timeZone = timeZone;
-    }
+    public void setTimeZone(String timeZone) { this.timeZone = timeZone;}
 
     private String timeZone;
 
